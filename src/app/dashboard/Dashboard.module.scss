@@ -1,0 +1,66 @@
+@import "@/styles/mixins";   // مسیر درست رو بزن
+@import "@/styles/variables"; // مسیر درست رو بزن
+
+.dashboard {
+  min-height: 100vh;
+  @include flexCenter;
+  background: linear-gradient(135deg, $gray, lighten($gray, 5%));
+  padding: 1rem;
+
+  .card {
+    @include card;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $text;
+    }
+
+    .name {
+      font-size: 1rem;
+      color: darken($text, 20%);
+      margin-bottom: 1.5rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 3px solid lighten($gray, 15%);
+    }
+
+    .logout {
+      background: $secondary;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: $radius;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: darken($secondary, 10%);
+      }
+    }
+  }
+}
+
+.loading {
+  @include flexCenter;
+  min-height: 100vh;
+  font-size: 1.25rem;
+  color: darken($text, 20%);
+}
