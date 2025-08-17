@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+
+    &:focus {
+      border-color: #0070f3;
+      box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2);
+    }
+  }
+
+  .inputError {
+    border-color: #dc2626;
+  }
+
+  .error {
+    color: #dc2626;
+    font-size: 0.8rem;
+  }
+}
