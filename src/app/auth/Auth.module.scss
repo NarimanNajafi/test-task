@@ -1,30 +1,58 @@
 @import "@/styles/variables";
 @import "@/styles/mixins";
 
-.formBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  .hint {
-    font-size: 0.8rem;
-    //color: $gray-500;
-  }
-}
-
-.card {
-  //background: $white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 400px;
-  margin: 2rem auto;
-}
 
 .page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  //background: $gray-100;
+  @include flexCenter;
+  background-color: $gray; // طوسی روشن
+  padding: 1rem;
+
+  .card {
+    @include card;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text;
+    }
+
+    .formBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .hint {
+        font-size: 0.875rem;
+        color: darken($text, 30%);
+        margin-top: 0.5rem;
+      }
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border-radius: $radius;
+      font-weight: 500;
+      cursor: pointer;
+      background-color: $primary;
+      color: #fff;
+      border: none;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
 }

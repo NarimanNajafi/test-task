@@ -49,20 +49,23 @@ export default function AuthPage() {
     }
 
     return (
-        <div className="page">
-            <div className="card">
-                <h2>ورود</h2>
+        <div className={styles.page}>
+            <div className={styles.card}>
+                <h2>{"ورود"}</h2>
                 <form className={styles.formBlock} onSubmit={handleSubmit}>
                     <Input
                         label="شماره موبایل"
                         value={phone}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
+                        onChange={(e) => setPhone(e.target.value)}
                         error={error}
                     />
-                    <Button type="submit" loading={loading}>ورود</Button>
-                    <p className="hint">ولیدیشن فقط برای تمرین است.</p>
+                    <Button type="submit" loading={loading}>
+                        {"ورود"}
+                    </Button>
+                    <p className={styles.hint}>{"ولیدیشن فقط برای تمرین است."}</p>
                 </form>
             </div>
         </div>
+
     );
 }
