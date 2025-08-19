@@ -62,7 +62,6 @@ export default function AuthPage() {
                     <Button type="submit" loading={loading}>
                         {"ورود"}
                     </Button>
-                    <p className={styles.hint}>{"ولیدیشن فقط برای تمرین است."}</p>
                 </form>
             </div>
         </div>
